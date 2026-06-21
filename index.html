@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham K Verma | Renewable Energy Analyst & Grid Modeler</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Shubham K Verma, a Renewable Energy Analyst specializing in grid modeling, solar/wind yield optimization, HOMER storage sizing, and financial feasibility.">
+    <meta name="keywords" content="Renewable Energy Analyst, Solar Yield Modeling, Wind Yield Assessment, Grid Integration, HOMER Pro, PVsyst, LCOE, Battery Energy Storage System, BESS, Decarbonization, Shubham K Verma">
+    <meta name="author" content="Shubham K Verma">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shubhamkverma.in/">
+    <meta property="og:title" content="Shubham K Verma | Renewable Energy Analyst">
+    <meta property="og:description" content="Data-driven solar/wind yield analysis, energy storage sizing, and financial modeling. Explore the interactive clean energy simulation dashboard.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         Header / Navigation
+         ========================================================================== -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-bolt"></i> SKV
+                <span class="logo-tag">Energy Analyst</span>
+            </a>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#simulator" class="nav-link">Simulator</a>
+                <a href="#about" class="nav-link">About & Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Open mobile navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-leaf"></i> Empowering Grid Decarbonization
+                </div>
+                <h1 class="hero-title">Modeling the <br><span class="highlight">Future of Energy</span></h1>
+                <p class="hero-description">
+                    Hello, I'm <strong>Shubham K Verma</strong>. I analyze, design, and optimize renewable energy assets. From utility-scale solar yield modeling to complex wind-solar-battery hybrid microgrids, I help developers and corporate buyers bridge the gap between data and bankable investments.
+                </p>
+                <div class="hero-actions">
+                    <a href="#simulator" class="btn btn-primary">Try Energy Simulator <i class="fa-solid fa-play"></i></a>
+                    <a href="#projects" class="btn btn-secondary">View Case Studies</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num" id="stat-solar">1.2 GW+</span>
+                        <span class="stat-label">Solar PV Modeled</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="stat-wind">680 MW</span>
+                        <span class="stat-label">Wind Resource Assessed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="stat-co2">4.5M T</span>
+                        <span class="stat-label">CO2 Offsets Sized</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-artwork">
+                <div class="hero-svg-wrapper">
+                    <!-- Inline Custom Renewable Grid SVG Illustration -->
+                    <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                        <!-- Sky Background Gradient -->
+                        <defs>
+                            <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="rgba(15, 23, 42, 0)" />
+                                <stop offset="100%" stop-color="rgba(16, 185, 129, 0.05)" />
+                            </linearGradient>
+                            <linearGradient id="solarGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="hsl(38, 92%, 50%)" />
+                                <stop offset="100%" stop-color="hsl(38, 92%, 30%)" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <rect width="500" height="400" fill="url(#skyGrad)" rx="20"/>
+                        
+                        <!-- Sun (Solar Energy Core) -->
+                        <circle cx="380" cy="100" r="35" class="sun-core" fill="url(#solarGlow)" opacity="0.8"/>
+                        <circle cx="380" cy="100" r="45" class="sun-glow" fill="none" stroke="hsl(38, 92%, 50%)" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+                        
+                        <!-- Floating Clouds -->
+                        <g class="floating-cloud" fill="rgba(255, 255, 255, 0.15)">
+                            <path d="M 50 130 a 20 20 0 0 1 30 -10 a 25 25 0 0 1 40 5 a 20 20 0 0 1 15 25 l -85 0 z" />
+                        </g>
+                        <g class="floating-cloud-delayed" fill="rgba(255, 255, 255, 0.1)">
+                            <path d="M 390 190 a 15 15 0 0 1 22 -7 a 20 20 0 0 1 30 4 a 15 15 0 0 1 13 18 l -65 0 z" />
+                        </g>
+                        
+                        <!-- Rolling Green Hills (Landscape) -->
+                        <path d="M -20 380 Q 120 320 260 360 T 520 330 L 520 420 L -20 420 Z" fill="rgba(16, 185, 129, 0.08)"/>
+                        <path d="M -20 350 Q 180 380 340 330 T 520 360 L 520 420 L -20 420 Z" fill="rgba(16, 185, 129, 0.05)"/>
+                        
+                        <!-- Power Line Tower (Transmission) -->
+                        <g stroke="var(--text-secondary)" stroke-width="1.5" fill="none" opacity="0.5">
+                            <line x1="80" y1="360" x2="110" y2="250" />
+                            <line x1="140" y1="360" x2="110" y2="250" />
+                            <line x1="95" y1="310" x2="125" y2="310" />
+                            <line x1="85" y1="280" x2="135" y2="280" />
+                            <line x1="100" y1="250" x2="120" y2="250" />
+                            <line x1="110" y1="250" x2="110" y2="235" />
+                            <!-- Cross arms -->
+                            <line x1="75" y1="260" x2="145" y2="260" />
+                            <line x1="85" y1="290" x2="135" y2="290" />
+                        </g>
+                        
+                        <!-- Solar Panel Arrays -->
+                        <g transform="translate(50, 310)" fill="none" stroke="var(--text-muted)" stroke-width="1.5">
+                            <!-- Array stand -->
+                            <line x1="40" y1="40" x2="40" y2="60" stroke-width="2" stroke="var(--text-secondary)"/>
+                            <line x1="85" y1="40" x2="85" y2="60" stroke-width="2" stroke="var(--text-secondary)"/>
+                            <!-- Blue Panels -->
+                            <polygon points="10,20 60,10 70,40 20,40" fill="rgba(6, 182, 212, 0.3)" stroke="var(--accent-battery)" />
+                            <polygon points="55,20 105,10 115,40 65,40" fill="rgba(6, 182, 212, 0.3)" stroke="var(--accent-battery)" />
+                            <!-- Grid division lines on panels -->
+                            <line x1="35" y1="15" x2="45" y2="40" stroke="rgba(255, 255, 255, 0.2)"/>
+                            <line x1="80" y1="15" x2="90" y2="40" stroke="rgba(255, 255, 255, 0.2)"/>
+                        </g>
+                        
+                        <!-- Battery Energy Storage Container (BESS) -->
+                        <g transform="translate(380, 290)">
+                            <!-- Outer Shell -->
+                            <rect x="0" y="10" width="80" height="50" rx="8" fill="var(--bg-color)" stroke="var(--accent-battery)" stroke-width="2" />
+                            <!-- Cool highlights -->
+                            <line x1="10" y1="20" x2="70" y2="20" stroke="var(--border)" stroke-dasharray="2,2"/>
+                            <line x1="10" y1="30" x2="70" y2="30" stroke="var(--border)" stroke-dasharray="2,2"/>
+                            <line x1="10" y1="40" x2="70" y2="40" stroke="var(--border)" stroke-dasharray="2,2"/>
+                            <!-- Indicator LEDs -->
+                            <circle cx="15" cy="50" r="3" fill="var(--accent-emerald)" id="bess-led-1" />
+                            <circle cx="25" cy="50" r="3" fill="var(--accent-emerald)" id="bess-led-2" />
+                            <circle cx="35" cy="50" r="3" fill="var(--accent-emerald)" id="bess-led-3" />
+                            <!-- Glowing storage cells symbol -->
+                            <path d="M 55 43 L 65 43 L 65 52 L 55 52 Z M 58 40 L 62 40 L 62 43 L 58 43 Z" fill="var(--accent-battery)" opacity="0.8"/>
+                        </g>
+                        
+                        <!-- Wind Turbine 1 (Large - Left Center) -->
+                        <g>
+                            <!-- Tower -->
+                            <path d="M 237 360 L 243 360 L 241 180 L 239 180 Z" fill="var(--text-secondary)" opacity="0.8" />
+                            <!-- Nacelle -->
+                            <rect x="235" y="174" width="10" height="8" rx="2" fill="var(--text-primary)" />
+                            <!-- Blades (Will animate via rotating style) -->
+                            <g class="turbine-blades">
+                                <circle cx="240" cy="178" r="4" fill="var(--text-primary)" />
+                                <!-- Blade 1 -->
+                                <path d="M 239 178 Q 237 120 240 100 Q 243 120 241 178 Z" fill="rgba(255, 255, 255, 0.9)" />
+                                <!-- Blade 2 (120deg) -->
+                                <path d="M 240 177 Q 292 205 308 220 Q 282 212 240 179 Z" fill="rgba(255, 255, 255, 0.9)" />
+                                <!-- Blade 3 (240deg) -->
+                                <path d="M 240 179 Q 188 205 172 220 Q 198 212 240 177 Z" fill="rgba(255, 255, 255, 0.9)" />
+                            </g>
+                        </g>
+                        
+                        <!-- Wind Turbine 2 (Smaller - Back Right) -->
+                        <g>
+                            <!-- Tower -->
+                            <path d="M 338 350 L 342 350 L 341 240 L 339 240 Z" fill="var(--text-muted)" opacity="0.6" />
+                            <!-- Nacelle -->
+                            <rect x="337" y="236" width="7" height="6" rx="2" fill="var(--text-secondary)" opacity="0.8"/>
+                            <!-- Blades -->
+                            <g class="turbine-blades-fast">
+                                <circle cx="340" cy="239" r="3" fill="var(--text-secondary)" />
+                                <!-- Blade 1 -->
+                                <path d="M 339.5 239 Q 338 190 340 180 Q 342 190 340.5 239 Z" fill="rgba(255, 255, 255, 0.7)" />
+                                <!-- Blade 2 -->
+                                <path d="M 340 238.5 Q 380 260 392 270 Q 372 265 340 239.5 Z" fill="rgba(255, 255, 255, 0.7)" />
+                                <!-- Blade 3 -->
+                                <path d="M 340 239.5 Q 300 260 288 270 Q 308 265 340 238.5 Z" fill="rgba(255, 255, 255, 0.7)" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         Interactive Energy Dashboard Simulator
+         ========================================================================== -->
+    <section class="section" id="simulator">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-tag">Interactive Sandbox</span>
+                <h2 class="section-title">Clean Energy <span class="highlight">Portfolio Simulator</span></h2>
+            </div>
+            
+            <div class="simulator-grid">
+                <!-- Controls Panel -->
+                <div class="glass-card simulator-controls">
+                    <div>
+                        <h3>System Configuration</h3>
+                        <p class="controls-intro">Adjust parameters to simulate annual energy production, cost metrics, and carbon emissions for a localized hybrid solar-wind grid system.</p>
+                    </div>
+                    
+                    <!-- Solar Input -->
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span class="slider-label slider-solar">
+                                <i class="fa-solid fa-sun"></i> Solar PV Capacity
+                            </span>
+                            <span class="slider-val" id="solar-val">250 kW</span>
+                        </div>
+                        <input type="range" id="solar-cap" class="range-input" min="0" max="1000" value="250" aria-label="Solar Capacity Slider">
+                    </div>
+                    
+                    <!-- Wind Input -->
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span class="slider-label slider-wind">
+                                <i class="fa-solid fa-wind"></i> Onshore Wind Capacity
+                            </span>
+                            <span class="slider-val" id="wind-val">500 kW</span>
+                        </div>
+                        <input type="range" id="wind-cap" class="range-input" min="0" max="2000" value="500" aria-label="Wind Capacity Slider">
+                    </div>
+                    
+                    <!-- Battery Input -->
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span class="slider-label slider-battery">
+                                <i class="fa-solid fa-car-battery"></i> BESS Storage Capacity
+                            </span>
+                            <span class="slider-val" id="battery-val">200 kWh</span>
+                        </div>
+                        <input type="range" id="battery-cap" class="range-input" min="0" max="1000" value="200" aria-label="Battery Capacity Slider">
+                    </div>
+                    
+                    <!-- Grid Status Bar -->
+                    <div class="grid-status-bar">
+                        <span>Microgrid Status:</span>
+                        <div class="status-indicator">
+                            <span class="status-dot" id="status-dot"></span>
+                            <span class="status-text" id="status-text">Optimal Grid Stability</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Display/Analytics Panel -->
+                <div class="simulator-display">
+                    <!-- Metrics Row -->
+                    <div class="metrics-row">
+                        <div class="glass-card metric-card metric-energy">
+                            <span class="metric-icon"><i class="fa-solid fa-plug"></i></span>
+                            <span class="metric-unit">Annual Generation</span>
+                            <div class="metric-value" id="metric-energy-val">1,245</div>
+                            <span class="metric-unit">MWh / Year</span>
+                            <p class="metric-desc">Total output from solar & wind resources.</p>
+                        </div>
+                        
+                        <div class="glass-card metric-card metric-co2">
+                            <span class="metric-icon"><i class="fa-solid fa-tree"></i></span>
+                            <span class="metric-unit">Carbon Offset</span>
+                            <div class="metric-value" id="metric-co2-val">880</div>
+                            <span class="metric-unit">Tonnes CO2e</span>
+                            <p class="metric-desc">Equal to planting ~14,600 trees.</p>
+                        </div>
+                        
+                        <div class="glass-card metric-card metric-roi">
+                            <span class="metric-icon"><i class="fa-solid fa-chart-line"></i></span>
+                            <span class="metric-unit">Financial Metrics</span>
+                            <div class="metric-value" id="metric-lcoe-val">4.2¢</div>
+                            <span class="metric-unit">LCOE per kWh</span>
+                            <p class="metric-desc">Payback Period: <strong id="payback-val">6.8 yrs</strong></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Chart/Yield Breakdown Visualizer -->
+                    <div class="glass-card visualizations-card">
+                        <h4><i class="fa-solid fa-chart-simple"></i> Simulated Monthly Generation Profile (MWh)</h4>
+                        
+                        <div class="chart-container">
+                            <div class="chart-y-axis">
+                                <span>200 -</span>
+                                <span>150 -</span>
+                                <span>100 -</span>
+                                <span>50 -</span>
+                                <span>0 -</span>
+                            </div>
+                            
+                            <!-- Monthly Bars (CSS Flex grid heights adjusted via JS) -->
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar-stacked" id="bar-jan">
+                                    <div class="bar-solar"></div>
+                                    <div class="bar-wind"></div>
+                                </div>
+                                <span class="chart-label">Jan</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar-stacked" id="bar-feb">
+                                    <div class="bar-solar"></div>
+                                    <div class="bar-wind"></div>
+                                </div>
+                                <span class="chart-label">Feb</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar-stacked" id="bar-mar">
+                                    <div class="bar-solar"></div>
+                                    <div class="bar-wind"></div>
+                                </div>
+                                <span class="chart-label">Mar</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar-stacked" id="bar-apr">
+                                    <div class="bar-solar"></div>
+                                    <div class="bar-wind"></div>
+                                </div>
+                                <span class="chart-label">Apr</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar-stacked" id="bar-may">
+                                    <div class="bar-solar"></div>
+                                    <div class="bar-wind"></div>
+                                </div>
+                                <span class="chart-label">May</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar-stacked" id="bar-jun">
+                                    <div class="bar-solar"></div>
+                                    <div class="bar-wind"></div>
+                                </div>
+                                <span class="chart-label">Jun</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar-stacked" id="bar-jul">
+                                    <div class="bar-solar"></div>
+                                    <div class="bar-wind"></div>
+                                </div>
+                                <span class="chart-label">Jul</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar-stacked" id="bar-aug">
+                                    <div class="bar-solar"></div>
+                                    <div class="bar-wind"></div>
+                                </div>
+                                <span class="chart-label">Aug</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar-stacked" id="bar-sep">
+                                    <div class="bar-solar"></div>
+                                    <div class="bar-wind"></div>
+                                </div>
+                                <span class="chart-label">Sep</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar-stacked" id="bar-oct">
+                                    <div class="bar-solar"></div>
+                                    <div class="bar-wind"></div>
+                                </div>
+                                <span class="chart-label">Oct</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar-stacked" id="bar-nov">
+                                    <div class="bar-solar"></div>
+                                    <div class="bar-wind"></div>
+                                </div>
+                                <span class="chart-label">Nov</span>
+                            </div>
+                            <div class="chart-bar-wrap">
+                                <div class="chart-bar-stacked" id="bar-dec">
+                                    <div class="bar-solar"></div>
+                                    <div class="bar-wind"></div>
+                                </div>
+                                <span class="chart-label">Dec</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Legend -->
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <span class="legend-dot legend-solar"></span>
+                                <span>Solar PV Production</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot legend-wind"></span>
+                                <span>Wind Turbine Production</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         About & Expertise
+         ========================================================================== -->
+    <section class="section" id="about">
+        <div class="container about-grid">
+            <div class="about-img-wrap glass-card">
+                <div class="about-img-placeholder">
+                    <i class="fa-solid fa-chart-line-up"></i>
+                    <p style="font-family: var(--mono-font); font-size: 0.9rem; font-weight: 500;">SHUBHAM K VERMA</p>
+                    <p style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; margin-top: 4px;">Renewable Energy Analyst</p>
+                    <div class="about-glow"></div>
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <span class="section-tag">Background & Skillset</span>
+                <h3>Data-driven optimization for clean energy deployment</h3>
+                <p class="about-text">
+                    I translate complex atmospheric, geographic, and electrical data into structured financial and physical profiles. Working at the intersection of energy yield modeling, database management, and grid integration, I support developer project financing, utility resource planning, and corporate ESG transactions. My focus is on reducing the Levelized Cost of Energy (LCOE) and optimizing battery charging dispatch regimes to build stable, grid-compliant, and carbon-negative systems.
+                </p>
+                
+                <div class="skills-container">
+                    <!-- Resource Modeling -->
+                    <div class="skills-group">
+                        <h4>Resource & Yield Assessment</h4>
+                        <div class="skills-list">
+                            <span class="skill-pill"><i class="fa-solid fa-sun"></i> PVsyst (Solar PV Modeling)</span>
+                            <span class="skill-pill"><i class="fa-solid fa-wind"></i> WAsP (Wind Atlas Analysis)</span>
+                            <span class="skill-pill"><i class="fa-solid fa-compass-drafting"></i> SAM (System Advisor Model)</span>
+                            <span class="skill-pill"><i class="fa-solid fa-map-location-dot"></i> QGIS & ArcGIS spatial mapping</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Analytics -->
+                    <div class="skills-group">
+                        <h4>Analytics & Coding</h4>
+                        <div class="skills-list">
+                            <span class="skill-pill"><i class="fa-brands fa-python"></i> Python (Pandas, SciPy, NumPy)</span>
+                            <span class="skill-pill"><i class="fa-solid fa-database"></i> SQL (PostgreSQL / DuckDB)</span>
+                            <span class="skill-pill"><i class="fa-solid fa-table"></i> Financial Modeling (LCOE, NPV, IRR)</span>
+                            <span class="skill-pill"><i class="fa-solid fa-chart-pie"></i> PowerBI & Tableaus Dashboards</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Grid & Storage -->
+                    <div class="skills-group">
+                        <h4>Grid Integration & Strategy</h4>
+                        <div class="skills-list">
+                            <span class="skill-pill"><i class="fa-solid fa-car-battery"></i> HOMER Pro (Microgrid Design)</span>
+                            <span class="skill-pill"><i class="fa-solid fa-bolt-lightning"></i> BESS Sizing & Degradation Models</span>
+                            <span class="skill-pill"><i class="fa-solid fa-file-contract"></i> PPA Analysis & Green Tariffs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         Projects Case Studies
+         ========================================================================== -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-title-wrap">
+                <span class="section-tag">Case Studies</span>
+                <h2 class="section-title">Key Projects & <span class="highlight">Analyses</span></h2>
+            </div>
+            
+            <div class="filter-wrap">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="solar">Solar PV</button>
+                <button class="filter-btn" data-filter="wind">Wind</button>
+                <button class="filter-btn" data-filter="hybrid">Hybrid & Storage</button>
+                <button class="filter-btn" data-filter="strategy">Corporate Strategy</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="glass-card project-card" data-category="solar">
+                    <div class="project-media">
+                        <i class="fa-solid fa-sun-plant-wilt project-icon-placeholder solar-icon"></i>
+                        <span class="project-tag">Solar PV</span>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">50MW Utility-Scale Yield Optimization</h3>
+                        <p class="project-desc">Led the energy yield assessment for a developer in Rajasthan. Modeled inter-row shading, dust degradation coefficients, and structural tilt configurations using PVsyst. The optimization scheme improved target output by 3.2%.</p>
+                        <div class="project-meta-list">
+                            <div class="project-meta">
+                                <i class="fa-solid fa-gear"></i> PVsyst
+                            </div>
+                            <div class="project-meta">
+                                <i class="fa-solid fa-bolt"></i> +4.5 GWh/yr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="glass-card project-card" data-category="hybrid">
+                    <div class="project-media">
+                        <i class="fa-solid fa-battery-three-quarters project-icon-placeholder"></i>
+                        <span class="project-tag">Hybrid & Storage</span>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">BESS Sizing for Remote Australian Mine</h3>
+                        <p class="project-desc">Simulated hybrid Wind-Solar-BESS capacity configurations for an off-grid mining concession using HOMER Pro. Conducted sensitivity analysis for battery state-of-charge degradation curves over a 15-year lease duration.</p>
+                        <div class="project-meta-list">
+                            <div class="project-meta">
+                                <i class="fa-solid fa-gear"></i> HOMER Pro
+                            </div>
+                            <div class="project-meta">
+                                <i class="fa-solid fa-gauge"></i> 75% Diesel Cut
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="glass-card project-card" data-category="strategy">
+                    <div class="project-media">
+                        <i class="fa-solid fa-calculator project-icon-placeholder"></i>
+                        <span class="project-tag">Corporate Strategy</span>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Virtual PPA Procurement Roadmap</h3>
+                        <p class="project-desc">Constructed structural financial forecasts for a manufacturing client's Scope 2 decarbonization framework. Evaluated dynamic contract-for-difference risk profiles, LCOE trends, and tariff structure adjustments.</p>
+                        <div class="project-meta-list">
+                            <div class="project-meta">
+                                <i class="fa-solid fa-gear"></i> Financial Models
+                            </div>
+                            <div class="project-meta">
+                                <i class="fa-solid fa-globe"></i> 100% Green
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="glass-card project-card" data-category="wind">
+                    <div class="project-media">
+                        <i class="fa-solid fa-wind project-icon-placeholder"></i>
+                        <span class="project-tag">Wind Resource</span>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Coastal Wind Resource & Obstacle Assessment</h3>
+                        <p class="project-desc">Mapped micro-scale wind speeds, turbulence indexes, and terrain roughness profiles using WAsP. Modeled wake interference effects across a proposed 120MW offshore turbine placement grid.</p>
+                        <div class="project-meta-list">
+                            <div class="project-meta">
+                                <i class="fa-solid fa-gear"></i> WAsP / QGIS
+                            </div>
+                            <div class="project-meta">
+                                <i class="fa-solid fa-clock"></i> 3400 Net Hrs/yr
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         Contact Section
+         ========================================================================== -->
+    <section class="section" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <div>
+                    <span class="section-tag">Get in Touch</span>
+                    <h3>Let's model the transition together</h3>
+                </div>
+                <p class="contact-text">
+                    Whether evaluating potential project sites, scoping utility storage, structuring corporate PPAs, or discussing clean energy policy, feel free to drop a message.
+                </p>
+                
+                <div class="contact-methods">
+                    <!-- Email -->
+                    <div class="contact-method-item">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:contact@shubhamkverma.in">contact@shubhamkverma.in</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Domain Info -->
+                    <div class="contact-method-item">
+                        <div class="contact-icon"><i class="fa-solid fa-globe"></i></div>
+                        <div class="contact-details">
+                            <h4>Web Address</h4>
+                            <p>www.shubhamkverma.in</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter Profile">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="glass-card contact-form-card">
+                <form id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="e.g. John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="e.g. john@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" placeholder="Project collaboration, consultation request, etc." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" placeholder="How can I assist with your renewable energy assessments?" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; height: 50px;">
+                        Send Message <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    
+                    <div class="form-status" id="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         Footer
+         ========================================================================== -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Shubham K Verma. All rights reserved.</p>
+            <p class="footer-credit">Designed for <a href="http://shubhamkverma.in" target="_blank" style="color: var(--accent-emerald)">shubhamkverma.in</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
