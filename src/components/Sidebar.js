@@ -30,8 +30,18 @@ function LiveClock() {
 export default function AppShell({ children }) {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [tickerItems, setTickerItems] = useState([]);
 
   useEffect(() => setMobileOpen(false), [pathname]);
+
+  useEffect(() => {
+    fetch('/api/ticker')
+      .then(r => r.json())
+      .then(data => {
+        if (Array.isArray(data)) setTickerItems(data);
+      })
+      .catch(err => console.error(err));
+  }, []);
 
   const isActive = (path) =>
     path === "/" ? pathname === "/" : pathname.startsWith(path);
@@ -69,6 +79,28 @@ export default function AppShell({ children }) {
         </div>
       </header>
 
+      {/* ── Ticker ── */}
+      {tickerItems.length > 0 && (
+        <div className="ticker-bar">
+          <div className="ticker-track">
+            {[...tickerItems, ...tickerItems].map((item, i) => (
+              <span key={i}>
+                <span className="ticker-item">
+                  <span className="ticker-label">{item.label}</span>
+                  <span
+                    className={`ticker-value ${item.dir === "up" ? "ticker-up" : item.dir === "down" ? "ticker-down" : ""}`}
+                  >
+                    {item.value} {item.changeStr && <span style={{fontSize:'9px', marginLeft:'4px', color:'inherit'}}>{item.changeStr}</span>}
+                  </span>
+                  {item.dir === "up" && "▲"}
+                  {item.dir === "down" && "▼"}
+                </span>
+                <span className="ticker-separator" />
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* ── Body ── */}
       <div className="terminal-body">
