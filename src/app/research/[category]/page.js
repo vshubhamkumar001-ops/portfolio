@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
   const cat = categories.find((c) => c.slug === category);
   if (!cat) return {};
   return {
-    title: `${cat.name} — SV Terminal`,
+    title: `${cat.name} — Shubham Verma`,
     description: cat.description,
   };
 }
@@ -26,7 +26,7 @@ export default async function CategoryPage({ params }) {
   return (
     <>
       <nav className="breadcrumb anim-in d1">
-        <Link href="/">Dashboard</Link>
+        <Link href="/">Home</Link>
         <span className="sep">›</span>
         <Link href="/research">Research</Link>
         <span className="sep">›</span>

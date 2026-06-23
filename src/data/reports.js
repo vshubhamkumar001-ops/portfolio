@@ -763,11 +763,184 @@ Jose Rafael Mendoza brings 17 years of experience, with over a decade in renewab
     ],
     references: [],
   },
-];
+  // ==========================================================================
+  // REPORT 8: Draft National Electricity Policy 2026
+  // Source: Writing Sample_NEP.pdf
+  // ==========================================================================
+  {
+    slug: "draft-nep-2026",
+    title: "Draft National Electricity Policy, 2026: Roadmap for India's Power Sector",
+    author: "Shubham Kumar Verma",
+    category: "energy-policy",
+    institution: "KOAN Advisory / IIT Kharagpur",
+    tags: ["Electricity Policy", "Grid Resilience", "DISCOM Reforms", "Renewable Integration", "India"],
+    readingTime: "5 min",
+    sections: [
+      {
+        heading: "TL;DR & Executive Summary",
+        content: "• The Ministry of Power has introduced the Draft National Electricity Policy (NEP), 2026 for public feedback, proposing a roadmap for a reliable, affordable, financially viable and environmentally sustainable power sector aligned with India's 2047 energy goals.\n• It replaces the 2005 policy and responds to new challenges such as financial stress of DISCOMs, large-scale renewable integration, and energy transition.\n• The policy emphasises cost-reflective tariffs, reduction of cross-subsidies, and promotion of competition, especially in power supply and markets.\n• It prioritises non-fossil generation, energy storage, grid resilience, and consumer-centric services, with a strong focus on digitalisation, smart infrastructure, and cybersecurity.\n• For large consumers, the policy could enable greater access to competitively priced clean power and improve the investment environment for renewable energy projects in India."
+      },
+      {
+        heading: "Introduction & Context",
+        content: "On January 20, 2026, The Ministry of Power introduced the Draft National Electricity Policy (NEP), 2026 for stakeholder consultation. It replaces the National Electricity Policy, 2005, which focused on universal electrification and capacity expansion. NEP 2026 responds to India's transformed power sector where access has largely been achieved, but financial viability, competitiveness, renewable integration, and grid resilience remain key challenges. The policy proposes a strategic framework to ensure reliable 24x7 power, support India's energy transition and climate commitments, and strengthen competition."
+      },
+      {
+        heading: "Key Pillars of the Policy",
+        content: "1. Financial Viability and Tariff Reforms: The policy addresses the chronic financial stress of State DISCOMs. It mandates cost-reflective tariffs, timely subsidy disbursements, and reduction of cross-subsidies. This will improve DISCOM cash flows and enable them to invest in grid upgrades and purchase power on time.\n\n2. Renewable Integration and Energy Transition: To support India's goal of reaching 500 GW of non-fossil capacity by 2030, the policy prioritises the integration of solar, wind, and hybrid generation. It mandates the deployment of Energy Storage Systems (ESS), including pumped hydro and battery storage, to manage grid stability.\n\n3. Grid Resilience and Smart Infrastructure: Emphasis is placed on digitalising the grid using smart meters, IoT devices, and advanced monitoring systems. The policy also introduces strict cybersecurity standards to safeguard critical electricity infrastructure from cyber threats."
+      },
+      {
+        heading: "Market Competitiveness & Open Access",
+        content: "The draft policy promotes competition by encouraging open access, letting large consumers purchase power directly from generators or exchanges. It encourages the development of power markets, including real-time markets and derivative contracts, to facilitate efficient price discovery. This will create a more dynamic, market-driven power sector that attracts private investment and lowers electricity costs for industries."
+      }
+    ],
+    references: [
+      "Ministry of Power. (2026). Draft National Electricity Policy, 2026. Government of India.",
+      "National Electricity Policy, 2005. Ministry of Power.",
+      "All India Power Engineers Federation (AIPEF) Stakeholder Review, February 2026."
+    ]
+  },
 
-// ============================================================================
-// Helper functions
-// ============================================================================
+  // ==========================================================================
+  // REPORT 9: CERC Carbon regulations 2026
+  // Source: Writing Sample_CERC Carbon trading framework.pdf
+  // ==========================================================================
+  {
+    slug: "cerc-carbon-regulations",
+    title: "CERC (Carbon Credit Certificates) Regulations, 2026: Operationalizing the Indian Carbon Market",
+    author: "Shubham Kumar Verma",
+    category: "carbon-markets",
+    institution: "KOAN Advisory / IIT Kharagpur",
+    tags: ["Carbon Markets", "CERC", "CCC Trading", "CCTS", "BEE"],
+    readingTime: "4 min",
+    sections: [
+      {
+        heading: "TL;DR",
+        content: "• On February 27, 2026, the Central Electricity Regulatory Commission (CERC) notified the Carbon Credit Certificate (CCC) trading regulations, creating India's first formal regulatory framework for carbon credit exchange under the Carbon Credit Trading Scheme (CCTS), 2023.\n• The regulations establish Power Exchanges as the primary platform for buying and selling CCCs between Obligated and Non-Obligated entities.\n• The Bureau of Energy Efficiency (BEE) is designated as the Administrator, while the Grid Controller of India will function as the Registry for CCC trading.\n• Price discovery will occur on Power Exchanges, bounded by a floor price and a forbearance price as approved by CERC.\n• CERC retains oversight powers to intervene in cases of abnormal price volatility and to impose penalties for non-compliance."
+      },
+      {
+        heading: "Context & Background",
+        content: "On February 27, 2026, the Central Electricity Regulatory Commission (CERC) notified the CERC (Terms and Conditions for Purchase and Sale of Carbon Credit Certificates) Regulations, 2026. These regulations operationalise the trading infrastructure for the Indian Carbon Market (ICM), established under the Carbon Credit Trading Scheme (CCTS), 2023, issued by the Ministry of Power. The CERC framework specifies the roles of key institutions, market structure, pricing boundaries, transaction rules, and oversight mechanisms for the exchange of Carbon Credit Certificates (CCCs)."
+      },
+      {
+        heading: "Institutional Roles and Market Architecture",
+        content: "The regulations establish a clear division of responsibilities:\n\n1. Bureau of Energy Efficiency (BEE): Functions as the Administrator. BEE is responsible for setting targets, issuing certificates, and monitoring compliance.\n\n2. Grid Controller of India: Serves as the Registry. It is responsible for maintaining the registry database, tracking issuance, transfer, and surrender of CCCs.\n\n3. Power Exchanges: Function as the trading platforms. Obligated entities (such as industries with carbon reduction targets) and non-obligated entities can buy and sell CCCs through these exchanges. Price discovery will occur on these exchanges through a closed double-sided uniform quote bidding mechanism."
+      },
+      {
+        heading: "Pricing Boundaries and Regulatory Oversight",
+        content: "To prevent extreme price volatility, CERC has introduced pricing boundaries:\n• Floor Price: The minimum price at which CCCs can be traded, protecting sellers and ensuring carbon has a minimum value.\n• Forbearance Price: The maximum price at which CCCs can be traded, protecting buyers from sudden price spikes.\n\nCERC retains broad market monitoring and oversight powers to prevent manipulation, intervene during abnormal market conditions, and impose penalties for non-compliance. This institutional layout aims to build a robust, transparent, and credible carbon market in India."
+      }
+    ],
+    references: [
+      "Central Electricity Regulatory Commission. (2026). CERC (Terms and Conditions for Purchase and Sale of Carbon Credit Certificates) Regulations, 2026.",
+      "Ministry of Power. (2023). Carbon Credit Trading Scheme (CCTS), 2023.",
+      "Ministry of Environment, Forest and Climate Change. (2025). Constitution of the National Designated Authority under Article 6 of the Paris Agreement."
+    ]
+  },
+
+  // ==========================================================================
+  // REPORT 10: Startup Ecosystem after DeepSeek
+  // Source: Indian Startup Ecosystem Post Deepseek.pdf
+  // ==========================================================================
+  {
+    slug: "startup-ecosystem-deepseek",
+    title: "India's Startup Ecosystem After DeepSeek-R1: Strategic Implications",
+    author: "Shubham Kumar Verma",
+    category: "technology-policy",
+    institution: "IIT Kharagpur",
+    tags: ["AI Startup", "DeepSeek", "Indic AI", "Infrastructure", "Technology Policy"],
+    readingTime: "4 min",
+    sections: [
+      {
+        heading: "Executive Summary",
+        content: "The release of DeepSeek-R1 in January 2025 marked a significant turning point in the global AI sector. It shattered the assumption that only large, multi-billion-dollar firms could build competitive, high-reasoning foundation models. With training costs under $6 million, DeepSeek-R1 offered comparable performance to proprietary giants. For India's startup ecosystem, which has historically been restricted to the application layer due to capital and GPU compute limitations, this open-weight paradigm shift opens a strategic window to transition into the model development layer."
+      },
+      {
+        heading: "From Application Layer to Foundation Models",
+        content: "For nearly two years following ChatGPT's release, Indian AI startups worked primarily at the application layer, building chatbots, productivity wrappers, and industry-specific tools by calling external APIs (OpenAI, Google). This model suffered from high API costs, lack of core IP, and supply vulnerabilities. DeepSeek-R1's release has accelerated a pivot toward building domain-specific, Indic-language foundation models. Indian startups are now actively fine-tuning open-weights models and employing techniques like Low-Rank Adaptation (LoRA) and Retrieval-Augmented Generation (RAG) to solve local challenges in agriculture, regional healthcare, law, and climate risk."
+      },
+      {
+        heading: "Compute Constraints and Capital Inflows",
+        content: "A critical bottleneck for Indian AI startups remains access to high-performance GPU clusters. While India's AI Mission aims to deploy 10,000 GPUs, startups face waiting lists and high costs. The low-cost training paradigm proved by DeepSeek has encouraged Indian VCs to invest heavily in AI infrastructure, tools, and developer platforms. Venture capital funds focusing on AI in India have tripled in 2026, catalyzing a new generation of startups focusing on software-defined compute optimization, Indic dataset tokenization, and energy-efficient AI models."
+      }
+    ],
+    references: [
+      "DeepSeek-R1 Technical Report. (2025). DeepSeek AI.",
+      "Gupta, A. (2026). VCs with AI focus triple in India as investors earmark more capital. Moneycontrol.",
+      "Ministry of Electronics & IT. (2025). IndiaAI Mission and compute infrastructure roadmap."
+    ]
+  },
+
+  // ==========================================================================
+  // REPORT 11: ICEA Industrial Policy
+  // Source: ICEA_Assignment.pdf
+  // ==========================================================================
+  {
+    slug: "icea-industrial-policy",
+    title: "India's Post-1991 Industrial and Manufacturing Policy Landscape",
+    author: "Shubham Kumar Verma",
+    category: "industrial-policy",
+    institution: "India Cellular & Electronics Association (ICEA) / IIT Kharagpur",
+    tags: ["Industrial Policy", "Manufacturing", "GVC", "PLI Scheme", "Electronics"],
+    readingTime: "10 min",
+    sections: [
+      {
+        heading: "Overview of India's Manufacturing Policy Landscape",
+        content: "This briefing paper evaluates India's post-1991 industrial and manufacturing policy reforms. While the 1991 liberalization dismantled the 'License Raj' and integrated India into the global economy, the manufacturing sector has stagnated around 14–17% of GDP. In contrast, services-led growth has rapidly expanded to exceed 55% of GDP. To correct this structural imbalance, the Indian government introduced the 'Make in India' initiative and the Production Linked Incentive (PLI) schemes in 2020. This paper assesses the achievements, structural limitations, and policy options to integrate Indian manufacturing into Global Value Chains (GVCs)."
+      },
+      {
+        heading: "The Production Linked Incentive (PLI) Scheme: Successes and Criticisms",
+        content: "The PLI scheme, with an outlay of ₹1.97 lakh crore ($24 billion) across 14 sectors (especially mobile phones and electronics), aims to attract large-scale manufacturing investments and boost exports. It has achieved clear successes, transforming India into a net exporter of smartphones (exports exceeding $15 billion in FY24) and attracting manufacturers like Apple and Samsung. However, the scheme faces criticism for encouraging low-value assembly work rather than deep industrial value-addition. Components (semiconductors, displays) continue to be imported, keeping domestic value-addition low (~15–20% compared to China's 40–50%). Critics warn that once fiscal incentives expire, manufacturing investments may relocate to more cost-competitive nations unless structural issues are resolved."
+      },
+      {
+        heading: "Structural Bottlenecks in GVC Integration",
+        content: "India's weak integration into Global Value Chains is driven by persistent structural constraints:\n\n• High Infrastructure & Logistics Costs: Logistics costs in India average 13-14% of GDP, compared to 8-9% in East Asian countries, reducing price competitiveness.\n\n• Inconsistent Tariff Structures: Inverted duty tariffs (where taxes on raw materials and components are higher than on finished goods) discourage local component manufacturing.\n\n• Stringent Labor and Land Acquisition Regulations: Complicated land acquisition and labor laws create compliance risks for multinational firms, making them prefer countries like Vietnam or Malaysia."
+      },
+      {
+        heading: "Comparative Policy Insights: India vs. Vietnam",
+        content: "Vietnam's rapid rise as a manufacturing hub offers valuable lessons for India. Vietnam aligned its trade policies by signing numerous Free Trade Agreements (FTAs) and offering tax exemptions for high-tech manufacturing. Furthermore, Vietnam focused on establishing integrated manufacturing clusters with dedicated logistics corridors and reliable, low-cost power. To replicate this success, India must rationalize component import duties, invest in specialized industrial parks, and sign bilateral FTAs with key export markets (EU, UK, US) to secure competitive access for Indian-made goods."
+      }
+    ],
+    references: [
+      "Chawla, I., & Kumar, N. (2023). FDI, International Trade and Global Value Chains (GVCs): India’s GVC Participation, Position and Value Capture. Asia and the Global Economy.",
+      "Dhar, B. (2024). PLI: On the Way to Another Failed Incentive Scheme? The India Forum.",
+      "Ministry of Commerce & Industry. (2024). 10 Years of Make in India. Press Information Bureau."
+    ]
+  },
+
+  // ==========================================================================
+  // REPORT 12: Green Hydrogen Standards
+  // Source: Green Ammonia.pdf & Green methanol.pdf
+  // ==========================================================================
+  {
+    slug: "green-hydrogen-standards",
+    title: "Green Ammonia and Green Methanol Standards: Operationalizing India's Green Hydrogen Mission",
+    author: "Shubham Kumar Verma",
+    category: "energy-policy",
+    institution: "Ministry of New and Renewable Energy (MNRE)",
+    tags: ["Green Hydrogen", "Green Ammonia", "Green Methanol", "MNRE Standards", "Decarbonization"],
+    readingTime: "4 min",
+    sections: [
+      {
+        heading: "India's Green Ammonia & Methanol Standards",
+        content: "On February 27, 2026, the Ministry of New and Renewable Energy (MNRE), Hydrogen Division, notified the formal standards defining 'Green Ammonia' and 'Green Methanol' for India under the National Green Hydrogen Mission. These standards establish clear emissions thresholds, monitoring frameworks, and verification protocols, facilitating policy incentives and international trade eligibility."
+      },
+      {
+        heading: "Green Ammonia Standard Specifications",
+        content: "• Definition: Green Ammonia is defined as ammonia (NH3) produced using Green Hydrogen as feedstock. Renewable energy used also includes electricity generated from renewable sources that is stored in energy storage systems or banked with the grid.\n\n• Emission Threshold: The total non-biogenic greenhouse gas emissions arising from green hydrogen production, ammonia synthesis, purification, compression, and on-site storage shall not exceed 0.38 kg of carbon dioxide equivalent per kg of ammonia (kg CO2 eq/kg NH3).\n\n• Monitoring: The Bureau of Energy Efficiency (BEE) is designated to specify the detailed monitoring, reporting, and verification methodologies."
+      },
+      {
+        heading: "Green Methanol Standard Specifications",
+        content: "• Definition: Green Methanol is defined as methanol (CH3OH) produced using Green Hydrogen as feedstock. It incorporates carbon dioxide captured from biogenic sources or direct air capture to synthesize methanol.\n\n• Emission Threshold: The total non-biogenic greenhouse gas emissions arising from green hydrogen production, carbon dioxide capture, methanol synthesis, purification, and on-site storage shall not exceed 0.44 kg of carbon dioxide equivalent per kg of methanol (kg CO2 eq/kg CH3OH).\n\n• Regulatory Framework: The Ministry of New and Renewable Energy, in partnership with certified third-party inspectors, will issue Green Methanol certificates based on monthly audits of electricity grids, hydrogen output, and carbon capture source verification."
+      }
+    ],
+    references: [
+      "Ministry of New and Renewable Energy. (2026). Green Ammonia Standard for India (No. 353/35/2022-NT).",
+      "Ministry of New and Renewable Energy. (2026). Green Methanol Standard for India (No. 353/35/2022-NT).",
+      "National Green Hydrogen Mission Guidelines. (2023). Government of India."
+    ]
+  }
+
+];
 
 export function getAllReports() {
   return reports;

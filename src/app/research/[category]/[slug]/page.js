@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
   const report = reports.find((r) => r.slug === slug);
   if (!report) return {};
   return {
-    title: `${report.title} — SV Terminal`,
+    title: `${report.title} — Shubham Verma`,
     description: report.sections[0]?.content.substring(0, 160),
   };
 }
@@ -65,7 +65,7 @@ export default async function ReportPage({ params }) {
   return (
     <>
       <nav className="breadcrumb anim-in d1">
-        <Link href="/">Dashboard</Link>
+        <Link href="/">Home</Link>
         <span className="sep">›</span>
         <Link href="/research">Research</Link>
         <span className="sep">›</span>
