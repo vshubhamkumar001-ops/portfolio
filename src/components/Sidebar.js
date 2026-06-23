@@ -4,69 +4,49 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-function LiveClock() {
-  const [time, setTime] = useState("");
-  useEffect(() => {
-    const tick = () => {
-      const now = new Date();
-      setTime(
-        now.toLocaleTimeString("en-IN", {
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          hour12: false,
-        })
-      );
-    };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
-  return <span>{time || "--:--:--"}</span>;
-}
-
 export default function AppShell({ children }) {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [tickerItems, setTickerItems] = useState([]);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => setMobileOpen(false), [pathname]);
 
   useEffect(() => {
-    fetch('/api/ticker')
-      .then(r => r.json())
-      .then(data => {
-        if (Array.isArray(data)) setTickerItems(data);
-      })
-      .catch(err => console.error(err));
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { label: "About", href: "/#about" },
-    { label: "Research", href: "/#research" },
-    { label: "Experience", href: "/#experience" },
-    { label: "Contact", href: "/#contact" }
+    { label: "About", href: "/#about", external: false },
+    { label: "Projects", href: "/#projects", external: false },
+    { label: "My Work", href: "https://drive.google.com/drive/folders/1LiaV1SC_tJMHepn5jYmWsQyZUPugD2MV?usp=sharing", external: true },
+    { label: "Contact", href: "mailto:shubhamkverma08@gmail.com", external: false }
   ];
 
   return (
     <div className="terminal-app">
-      {/* ── Sticky Top Header ── */}
-      <header className="top-bar">
+      {/* ── Top Header ── */}
+      <header className={`top-bar ${scrolled ? "scrolled" : ""}`}>
         <Link href="/" className="top-bar-brand">
-          <div className="brand-indicator" />
-          <span className="brand-name">Shubham Verma</span>
+          Shubham Verma.
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="desktop-nav">
           {navLinks.map((link) => (
-            <Link key={link.label} href={link.href} className="nav-link">
-              {link.label}
-            </Link>
+            link.external ? (
+              <a key={link.label} href={link.href} className="nav-link" target="_blank" rel="noopener noreferrer">
+                {link.label}
+              </a>
+            ) : (
+              <Link key={link.label} href={link.href} className="nav-link">
+                {link.label}
+              </Link>
+            )
           ))}
-          <div className="meta-chip" style={{ marginLeft: "12px" }}>
-            <LiveClock />
-          </div>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -75,103 +55,97 @@ export default function AppShell({ children }) {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation menu"
         >
-          {mobileOpen ? "✕" : "≡"}
+          {mobileOpen ? (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          ) : (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          )}
         </button>
       </header>
 
       {/* Mobile Nav Dropdown */}
       {mobileOpen && (
-        <div className="mobile-nav-dropdown">
+        <div className="mobile-nav-dropdown fade-in">
           {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="mobile-nav-link"
-              onClick={() => setMobileOpen(false)}
-            >
-              {link.label}
-            </Link>
+            link.external ? (
+              <a
+                key={link.label}
+                href={link.href}
+                className="mobile-nav-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="mobile-nav-link"
+                onClick={() => setMobileOpen(false)}
+              >
+                {link.label}
+              </Link>
+            )
           ))}
-          <div className="mobile-nav-clock">
-            <LiveClock /> (IST)
-          </div>
-        </div>
-      )}
-
-      {/* ── Live Ticker ── */}
-      {tickerItems.length > 0 && (
-        <div className="ticker-bar">
-          <div className="ticker-track">
-            {[...tickerItems, ...tickerItems].map((item, i) => (
-              <span key={i} style={{ display: "inline-flex", alignItems: "center" }}>
-                <span className="ticker-item">
-                  <span className="ticker-label">{item.label}</span>
-                  <span
-                    className={`ticker-value ${item.dir === "up" ? "ticker-up" : item.dir === "down" ? "ticker-down" : ""}`}
-                  >
-                    {item.value} {item.changeStr && <span style={{ fontSize: '9px', marginLeft: '4px', color: 'inherit' }}>{item.changeStr}</span>}
-                  </span>
-                  {item.dir === "up" && "▲"}
-                  {item.dir === "down" && "▼"}
-                </span>
-                <span className="ticker-separator" />
-              </span>
-            ))}
-          </div>
         </div>
       )}
 
       {/* ── Main Layout Body ── */}
       <div className="terminal-body">
         <main className="terminal-main">
-          <div className="panel-container">{children}</div>
+          {children}
         </main>
       </div>
+
+      {/* ── Footer ── */}
+      <footer className="site-footer">
+        <div className="footer-inner">
+          <div className="footer-copy">
+            &copy; {new Date().getFullYear()} Shubham Verma. All rights reserved.
+          </div>
+          <div className="footer-links">
+            <a href="https://www.linkedin.com/in/shubham-verma-067643326" target="_blank" rel="noopener noreferrer" className="footer-link" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="mailto:shubhamkverma08@gmail.com" className="footer-link" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </footer>
 
       {/* Extra CSS for Mobile Navigation */}
       <style jsx global>{`
         .mobile-menu-btn {
           display: none;
           background: none;
-          border: 1px solid var(--border);
-          color: var(--primary);
-          font-size: 20px;
-          padding: 4px 8px;
+          border: none;
+          color: var(--text-primary);
           cursor: pointer;
-          border-radius: 4px;
         }
         
         .mobile-nav-dropdown {
           display: none;
           flex-direction: column;
           background: var(--bg-base);
-          border-bottom: 1px solid var(--border);
-          padding: 16px 20px;
-          gap: 12px;
-          position: absolute;
+          padding: 24px 40px;
+          gap: 16px;
+          position: fixed;
           top: var(--header-h);
           left: 0;
           right: 0;
           z-index: 999;
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+          border-bottom: 1px solid var(--border);
+          box-shadow: var(--shadow-md);
         }
 
         .mobile-nav-link {
-          font-family: var(--font-mono);
-          font-size: 13px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
+          font-size: 18px;
+          font-weight: 500;
           color: var(--text-primary);
-          padding: 8px 0;
-          border-bottom: 0.5px solid var(--border);
-        }
-
-        .mobile-nav-clock {
-          font-family: var(--font-mono);
-          font-size: 11px;
-          color: var(--text-muted);
-          padding-top: 4px;
+          padding: 12px 0;
         }
 
         @media (max-width: 968px) {
@@ -179,7 +153,9 @@ export default function AppShell({ children }) {
             display: none;
           }
           .mobile-menu-btn {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
           }
           .mobile-nav-dropdown {
             display: flex;
@@ -189,4 +165,3 @@ export default function AppShell({ children }) {
     </div>
   );
 }
-

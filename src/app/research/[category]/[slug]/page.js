@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { categories } from "@/data/categories";
 import { reports } from "@/data/reports";
+import ReportChart from "@/components/ReportChart";
 
 export async function generateStaticParams() {
   return reports.map((r) => ({ category: r.category, slug: r.slug }));
@@ -135,7 +136,14 @@ export default async function ReportPage({ params }) {
               <div className="report-section-body">
                 <RichText text={section.content} />
               </div>
-              {section.tableData && <DataTable tableData={section.tableData} />}
+              {section.tableData && (
+                <>
+                  {report.slug === "crm-park-processing-cost-analysis" && (
+                    <ReportChart tableData={section.tableData} />
+                  )}
+                  <DataTable tableData={section.tableData} />
+                </>
+              )}
             </section>
           ))}
 

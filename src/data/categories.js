@@ -26,15 +26,7 @@ export const categories = [
     color: "#1a3a5c",
     gradient: "linear-gradient(135deg, #0f172a, #1a3a5c)",
   },
-  {
-    slug: "apac-solar",
-    name: "APAC Solar Directory",
-    description:
-      "Leadership directory of the Asian Photovoltaic Industry Association (APVIA) and key solar energy stakeholders across the Asia-Pacific region.",
-    icon: "☀️",
-    color: "#ef4444",
-    gradient: "linear-gradient(135deg, #991b1b, #ef4444)",
-  },
+
   {
     slug: "energy-policy",
     name: "Energy Policy",

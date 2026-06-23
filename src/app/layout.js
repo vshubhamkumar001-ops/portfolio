@@ -2,16 +2,17 @@ import "./globals.css";
 import AppShell from "@/components/Sidebar";
 
 export const metadata = {
-  title: "SV TERMINAL — Shubham Verma Research Dashboard",
+  title: "Shubham Verma — Public Policy Researcher",
   description:
-    "Bloomberg-style research terminal for Shubham Kumar Verma, Renewable Energy Analyst at CEEW. Critical minerals, copper strategy, trade intelligence.",
+    "Portfolio of Shubham Kumar Verma, public policy researcher specializing in renewable energy transition, critical minerals, trade intelligence, and carbon markets.",
   keywords: [
+    "public policy",
     "renewable energy",
-    "CEEW",
     "critical minerals",
-    "copper",
+    "carbon markets",
     "India energy transition",
-    "research terminal",
+    "policy research",
+    "Shubham Verma",
   ],
   authors: [{ name: "Shubham Kumar Verma" }],
 };
