@@ -34,9 +34,12 @@ export default async function CategoryPage({ params }) {
       </nav>
 
       <div className="page-hero anim-in d2">
-        <div className="hero-label" style={{ color: cat.color }}>
+        <div className="hero-label" style={{ color: cat.color, display: "flex", alignItems: "center", gap: "8px" }}>
           <div className="hero-dot" style={{ background: cat.color }} />
-          {cat.icon} {cat.name}
+          <div style={{ width: "24px", height: "24px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            {cat.icon}
+          </div>
+          <span>{cat.name}</span>
         </div>
         <h1>{cat.name}</h1>
         <p className="hero-sub">{cat.description}</p>

@@ -19,9 +19,9 @@ export default function PortfolioPage() {
   const projects = [
     {
       category: "Critical Minerals",
-      title: "Leveraging AI in India's Critical Mineral Value Chain",
-      description: "Machine learning algorithms for mineral-bearing region identification and exploration data processing under NCMM 2025.",
-      link: "/research/critical-minerals/ai-critical-mineral-value-chain",
+      title: "Copper as a Strategic Mineral for Clean Energy, Mobility, and Digital Infrastructure",
+      description: "Analyzing $6.8B trade deficits and global supply concentration for transition materials.",
+      link: "/research/critical-minerals/copper-strategic-mineral-full-report",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="none">
           <defs>
@@ -47,10 +47,10 @@ export default function PortfolioPage() {
       )
     },
     {
-      category: "Resource Strategy",
-      title: "Securing India's Copper Supply Chain",
-      description: "Analyzing $6.8B trade deficits and global supply concentration for transition materials.",
-      link: "/research/copper-strategy/copper-strategic-mineral-full-report",
+      category: "Industrial Policy",
+      title: "India's Post-1991 Industrial and manufacturing Policy Landscape",
+      description: "Evaluating the stagnation of manufacturing at 13-15% of GDP and structural integration into Global Value Chains.",
+      link: "/research/industrial-policy/indias-stagnant-manufacturing",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="none">
           <defs>
@@ -110,9 +110,6 @@ export default function PortfolioPage() {
           <a href="#projects" className="btn btn-primary">
             View Work
           </a>
-          <a href="mailto:shubhamkverma08@gmail.com" className="btn btn-outline">
-            Resume / Contact
-          </a>
         </div>
       </section>
 
@@ -123,13 +120,13 @@ export default function PortfolioPage() {
             <h2>About Me</h2>
             <div className="about-bio">
               <p>
-                Public policy researcher and IIT Kharagpur graduate with hands-on experience across Renewable energy, critical minerals, sustainability governance, environmental regulation and climate policy, built through research experiences at Mercom India, CEEW, KOAN Advisory, and the Office of the District Collector, Shahdol.
+                Public policy researcher passionate about shaping evidence-based solutions for the energy transition, climate action, and sustainable development. I did my Master's in Public Policy, Law and Governance from IIT Kharagpur, where I built a strong foundation in policy analysis, quantitative research, and regulatory governance. 
               </p>
               <p>
-                I specialise in policy research, regulatory analysis, literature review, data analysis and stakeholder mapping, with the ability to translate complex, multi-dimensional policy challenges into clear, evidence-based insights and actionable recommendations.
+                Through my work with organizations such as Mercom India, CEEW, KOAN Advisory, and the Office of the District Collector, I have contributed to research on renewable energy, carbon markets, critical minerals, and public policy implementation. I enjoy transforming complex policy and market data into actionable insights that support better decision-making. 
               </p>
               <p>
-                My work sits at the intersection of environmental governance, clean energy transition, technology policy, and strategic sectors, areas where rigorous research and independent analysis can drive meaningful public impact. I bring strong quantitative skills in R, Python, and STATA alongside a track record of policy writing across issue briefs, field reports, and regulatory assessments.
+                As I continue my journey, I aim to bridge research, technology, and governance to help design policies that accelerate India's clean energy transition and create meaningful social impact.
               </p>
             </div>
           </div>

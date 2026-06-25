@@ -1,70 +1,40 @@
+import React from "react";
+
 export const categories = [
   {
-    slug: "critical-minerals",
-    name: "Critical Minerals",
-    description:
-      "Research on India's critical mineral value chain — AI applications in mineral exploration, strategic autonomy, and the National Critical Minerals Mission (NCMM) 2025.",
-    icon: "⛏️",
-    color: "#10b981",
-    gradient: "linear-gradient(135deg, #065f46, #10b981)",
-  },
-  {
-    slug: "copper-strategy",
-    name: "Copper Strategy",
-    description:
-      "Strategic analysis of copper as an electrification mineral — supply chain vulnerabilities, trade deficits, and policy recommendations for India's energy transition.",
-    icon: "🔋",
-    color: "#1d6fad",
-    gradient: "linear-gradient(135deg, #1a3a5c, #1d6fad)",
-  },
-  {
-    slug: "trade-intelligence",
-    name: "Trade Intelligence",
-    description:
-      "Guides on international trade data systems — HS codes, UN Comtrade queries, and trade classification frameworks for clean energy minerals and products.",
-    icon: "📊",
-    color: "#1a3a5c",
-    gradient: "linear-gradient(135deg, #0f172a, #1a3a5c)",
-  },
-
-  {
     slug: "energy-policy",
-    name: "Energy Policy",
+    name: "Energy Policy & Transition",
     description:
-      "Research on clean energy integration, grid regulations, and national standards for green hydrogen, ammonia, and electricity grid stability.",
-    icon: "⚡",
-    color: "#0284c7",
-    gradient: "linear-gradient(135deg, #0369a1, #0284c7)",
+      "Policy briefs and regulatory assessments on India's clean energy transition, green hydrogen derivatives, and power sector reforms.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+    ),
   },
   {
-    slug: "carbon-markets",
-    name: "Carbon Markets",
+    slug: "climate-policy",
+    name: "Climate Policy & Carbon Markets",
     description:
-      "Analysis of environmental compliance, ESG policies, and CERC Carbon Credit Certificates trading frameworks under the CCTS 2023.",
-    icon: "🌱",
-    color: "#16a34a",
-    gradient: "linear-gradient(135deg, #15803d, #16a34a)",
+      "Analyses of carbon credit trading schemes, cross-border adjustment mechanisms (CBAM), and environmental governance.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+    ),
   },
   {
-    slug: "technology-policy",
-    name: "Technology Policy",
+    slug: "critical-minerals",
+    name: "Critical Minerals & Resources",
     description:
-      "Evaluation of the artificial intelligence startup ecosystem, data compute constraints, and open-weight reasoning model implications in India.",
-    icon: "🤖",
-    color: "#8b5cf6",
-    gradient: "linear-gradient(135deg, #6d28d9, #8b5cf6)",
+      "Research on strategic mineral supply chains, battery traceability, and securing materials for the energy transition.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+    ),
   },
   {
     slug: "industrial-policy",
-    name: "Industrial Policy",
+    name: "Industrial & Manufacturing Policy",
     description:
-      "Studies on manufacturing competitiveness, Special Economic Zones (SEZs), and Global Value Chain (GVC) integration comparisons.",
-    icon: "🏢",
-    color: "#475569",
-    gradient: "linear-gradient(135deg, #334155, #475569)",
+      "Evaluations of Make in India, PLI schemes, and structural constraints in India's manufacturing landscape.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+    ),
   }
 ];
-
-export function getCategoryBySlug(slug) {
-  return categories.find((c) => c.slug === slug) || null;
-}

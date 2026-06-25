@@ -39,7 +39,9 @@ export default function ResearchPage() {
                   style={{ minHeight: "280px" }}
                 >
                   <div className="bento-content" style={{ padding: "32px" }}>
-                    <div style={{ fontSize: "32px", marginBottom: "16px" }}>{cat.icon}</div>
+                    <div style={{ width: "48px", height: "48px", marginBottom: "20px", color: "var(--text-primary)" }}>
+                      {cat.icon}
+                    </div>
                     <h3 style={{ fontSize: "22px", marginBottom: "12px" }}>{cat.name}</h3>
                     <p style={{ fontSize: "15px", color: "var(--text-secondary)", marginBottom: "24px", flex: 1 }}>
                       {cat.description}

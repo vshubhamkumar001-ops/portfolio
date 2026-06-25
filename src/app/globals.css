@@ -449,6 +449,11 @@ p {
   flex: 1;
 }
 
+.bento-item.featured .bento-thumb {
+  width: 50%;
+  flex-shrink: 0;
+}
+
 .bento-item.featured .bento-content {
   width: 50%;
   padding: 48px;
